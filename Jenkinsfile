@@ -23,8 +23,6 @@ pipeline {
                 script {
                     sh """
                         set -e
-                        sudo apt update
-                        sudo apt install openjdk-17-jdk
                         mkdir -p ~/.ssh
                         ssh-keyscan -H ${DEV_SERVER.split('@')[1]} >> ~/.ssh/known_hosts
                         scp -i ${SSH_KEY} ${JAR_FILE} ${DEV_SERVER}:/tmp/
