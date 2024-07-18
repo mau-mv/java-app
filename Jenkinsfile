@@ -4,7 +4,7 @@ pipeline {
     environment {
         // Define environment variables for remote servers
         SSH_KEY = credentials("ssh-key-aws")
-        DEV_SERVER = "ec2_user@34.217.66.229"
+        DEV_SERVER = "ec2-user@34.217.66.229"
         JAR_FILE = "target/demo-0.0.1-SNAPSHOT.jar"
     }
 
